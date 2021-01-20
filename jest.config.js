@@ -5,8 +5,5 @@ module.exports = {
       "<rootDir>/__mocks__/fileMock.js",
     "\\.(css|less)$": "<rootDir>/__mocks__/styleMock.js"
   },
-  setupFilesAfterEnv: [
-    // "<rootDir>/setuptests.js"
-    // "@testing-library/jest-dom/extend-expect"
-  ]
+  setupFilesAfterEnv: ["@testing-library/jest-dom/extend-expect"]
 };
