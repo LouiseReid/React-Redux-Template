@@ -7,16 +7,24 @@
     "start": "parcel src/index.html --open",
     "test": "jest",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix \"./src/**/*.{js,jsx}\""
+    "lint:fix": "eslint --fix \"./src/**/*.{js,jsx}\"",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.12.10",
     "@babel/preset-env": "7.12.11",
     "@babel/preset-react": "7.12.10",
+    "@storybook/addon-actions": "^6.1.14",
+    "@storybook/addon-essentials": "^6.1.14",
+    "@storybook/addon-links": "^6.1.14",
+    "@storybook/react": "5.3",
     "@testing-library/react": "^11.2.3",
     "babel-eslint": "^10.1.0",
     "babel-jest": "26.6.3",
+    "babel-loader": "^8.2.2",
     "eslint": "^7.18.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^6.15.0",
@@ -44,7 +52,6 @@
   },
   "husky": {
     "hooks": {
-      "commit-msg": "node ./scripts/prependCommitMsg.js",
       "pre-commit": "lint-staged",
       "pre-push": "npx eslint src && npm run test"
     }
