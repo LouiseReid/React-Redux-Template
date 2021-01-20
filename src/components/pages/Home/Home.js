@@ -8,6 +8,7 @@ const Home = () => {
     <>
       <PageTitle>{title}!</PageTitle>
       <button onClick={handleSetTitle}>Hello?</button>
+      <p> hello</p>
     </>
   );
 };
