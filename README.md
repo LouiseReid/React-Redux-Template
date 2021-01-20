@@ -10,3 +10,4 @@ Template React starting template using:
 - React testing library
 - Storybook
 - eslint and prettier config
+- Atomic design pattern
