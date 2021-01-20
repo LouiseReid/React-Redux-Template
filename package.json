@@ -44,6 +44,7 @@
   },
   "husky": {
     "hooks": {
+      "commit-msg": "node ./scripts/addJiraRef.js",
       "pre-commit": "lint-staged",
       "pre-push": "npx eslint src && npm run test"
     }
