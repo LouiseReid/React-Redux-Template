@@ -3,10 +3,10 @@
   "rules": {
     "no-console": 2,
     "prettier/prettier": [
-      "error",
       {
         "trailingComma": "es5",
-        "singleQuote": true,
+        "arrowParens": "always",
+        "singleQuote": false,
         "printWidth": 120,
         "tabWidth": 2
       }
