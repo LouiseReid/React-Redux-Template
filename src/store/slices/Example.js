@@ -1,22 +1,24 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice } from "@reduxjs/toolkit";
 
 export const exampleSlice = createSlice({
-  name: 'exampleSlice',
+  name: "exampleSlice",
   initialState: {
-    data: {},
+    data: {
+      title: "Hiya"
+    },
     loading: false,
-    error: {},
+    error: {}
   },
   reducers: {
     // Examples
     setTitle: (state, action) => {
       state.data.title = action.payload;
     },
-    clearError: (state) => {
+    clearError: state => {
       state.error = {};
-    },
+    }
   },
   extraReducers: {
     // async reducers from createAsyncThunk
-  },
+  }
 });
