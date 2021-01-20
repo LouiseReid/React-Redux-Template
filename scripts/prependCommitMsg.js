@@ -14,17 +14,10 @@ exec("git rev-parse --abbrev-ref HEAD", (err, branchName, stderr) => {
   exitOnError(err);
   exitOnError(stderr);
 
-  // const branchTicketMatch = branchName.match(/^[A-Z][A-Z0-9_]+-\d+/);
-
   const excludedBranches = ["master", "dev", "development"];
   if (excludedBranches.includes(branchName.trim())) {
     process.exit(0);
   }
-
-  // if (!branchTicketMatch) {
-  //   exitOnError("Jira ticket ID not found in branch name");
-  // } else {
-  // const jiraId = branchTicketMatch[0];
 
   const messageFile = process.env.HUSKY_GIT_PARAMS;
   const message = fs.readFileSync(messageFile, { encoding: "utf-8" });
@@ -38,5 +31,4 @@ exec("git rev-parse --abbrev-ref HEAD", (err, branchName, stderr) => {
       encoding: "utf-8",
     });
   }
-  // }
 });
