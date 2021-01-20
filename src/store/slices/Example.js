@@ -9,12 +9,12 @@ export const exampleSlice = createSlice({
   },
   reducers: {
     // Examples
-    // setTitle: (state, action) => {
-    //     state.title: action.payload
-    // }
-    // clearError: state => {
-    //   state.error = {};
-    // }
+    setTitle: (state, action) => {
+      state.data.title = action.payload;
+    },
+    clearError: state => {
+      state.error = {};
+    }
   },
   extraReducers: {
     // async reducers from createAsyncThunk

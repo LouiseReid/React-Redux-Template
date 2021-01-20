@@ -1,4 +1,4 @@
-import { exampleSlice } from "./Auth";
+import { exampleSlice } from "./Example";
 
 describe("exampleSlice", () => {
   const { reducer } = exampleSlice;
