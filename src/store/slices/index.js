@@ -1,7 +1,7 @@
-import { exampleSlice } from "./Example";
+import { exampleSlice } from './Example';
 
 const rootReducer = {
-  example: exampleSlice.reducer
+  example: exampleSlice.reducer,
 };
 
 export default rootReducer;
