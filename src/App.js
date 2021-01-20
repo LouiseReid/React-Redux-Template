@@ -1,16 +1,8 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import PageTitle from "./components/atoms/PageTitle";
-import { getTitle } from "./store/selectors/example";
+import Home from "./components/pages/Home";
 
 const App = () => {
-  const title = useSelector(state => getTitle(state));
-
-  return (
-    <div>
-      <PageTitle>{title}</PageTitle>
-    </div>
-  );
+  return <Home />;
 };
 
 export default App;
